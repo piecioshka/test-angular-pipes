@@ -1,31 +1,40 @@
-import { TestBed, async } from '@angular/core/testing';
+import { TestBed, async, ComponentFixture } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { OnlyFirstPipe } from './only-first.pipe';
 
 describe('AppComponent', () => {
+  let fixture: ComponentFixture<AppComponent> = null;
+  let component = null;
+  let nativeElement = null;
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        OnlyFirstPipe
       ],
     }).compileComponents();
+
+    fixture = TestBed.createComponent(AppComponent);
+    component = fixture.debugElement.componentInstance;
+    nativeElement = fixture.debugElement.nativeElement;
   }));
 
+  afterEach(() => {
+    nativeElement.remove();
+  });
+
   it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app).toBeTruthy();
+    expect(component).toBeTruthy();
   });
 
-  it(`should have as title 'test-angular-pipes'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('test-angular-pipes');
-  });
-
-  it('should render title in a h1 tag', () => {
-    const fixture = TestBed.createComponent(AppComponent);
+  it('should render title in a h2 tag', () => {
     fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to test-angular-pipes!');
+    expect(nativeElement.querySelector('h2').textContent).toContain('Pipe Demo');
+  });
+
+  it('should display single item in list', () => {
+    fixture.detectChanges();
+    expect(nativeElement.querySelectorAll('ul li').length).toEqual(1);
   });
 });

@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'test-angular-pipes';
+  collection = [
+    'wlazł',
+    'kotek',
+    'na',
+    'płotek',
+    'i',
+    'mruga'
+  ];
 }
