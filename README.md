@@ -4,7 +4,7 @@
 
 ## Demo 🎉
 
-* <https://piecioshka.github.io/test-angular-pipes/>
+<https://piecioshka.github.io/test-angular-pipes/>
 
 ## Features
 

@@ -1,4 +1,5 @@
 {
+  "private": true,
   "name": "test-angular-pipes",
   "version": "0.0.0",
   "scripts": {
@@ -11,7 +12,6 @@
     "predeploy": "ng build --base-href=/test-angular-pipes/",
     "deploy": "NODE_DEBUG=gh-pages gh-pages -d dist/test-angular-pipes/"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "~7.1.0",
     "@angular/common": "~7.1.0",
