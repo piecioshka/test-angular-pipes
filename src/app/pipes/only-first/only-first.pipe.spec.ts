@@ -11,9 +11,9 @@ describe("OnlyFirstPipe", () => {
     expect(pipe).toBeTruthy();
   });
 
-  it("should reduce list of items", () => {
+  it("should reduce first element from the list", () => {
     const collection = ["foo", "bar", "baz"];
     const output = pipe.transform(collection);
-    expect(output).toEqual([collection[0]]);
+    expect(output).toEqual(["foo"]);
   });
 });

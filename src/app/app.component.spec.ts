@@ -25,10 +25,10 @@ describe("AppComponent", () => {
     expect(component).toBeTruthy();
   });
 
-  it("should render title in a h2 tag", () => {
+  it("should render title in a h1 tag", () => {
     fixture.detectChanges();
-    expect(nativeElement.querySelector("h2").textContent).toContain(
-      "Pipe Demo"
+    expect(nativeElement.querySelector("h1").textContent).toContain(
+      "Angular Pipe"
     );
   });
 
