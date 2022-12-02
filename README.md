@@ -8,4 +8,4 @@
 
 ## Features
 
-* :white_check_mark: Create custom Pipe (with unit tests)
+* :white_check_mark: Create custom Pipe (with unit testing)
