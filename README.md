@@ -2,7 +2,7 @@
 
 :ledger: Test app with custom Pipe in Angular.
 
-## Demo 🎉
+## Preview 🎉
 
 <https://piecioshka.github.io/test-angular-pipes/>
 
